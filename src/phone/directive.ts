@@ -1,5 +1,6 @@
-import { Directive, Input, forwardRef, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import { NG_VALIDATORS, Validator, ValidatorFn, AbstractControl } from '@angular/forms';
+import { Directive, forwardRef, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AbstractControl, NG_VALIDATORS, Validator, ValidatorFn } from '@angular/forms';
+import { CountryCode } from 'libphonenumber-js';
 
 import { phone } from './';
 
@@ -14,7 +15,7 @@ const PHONE_VALIDATOR: any = {
   providers: [PHONE_VALIDATOR]
 })
 export class PhoneValidator implements Validator, OnInit, OnChanges {
-  @Input() phone: string;
+  @Input() phone: CountryCode;
 
   private validator: ValidatorFn;
   private onChange: () => void;

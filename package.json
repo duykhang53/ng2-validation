@@ -66,6 +66,6 @@
     "zone.js": "^0.8.4"
   },
   "dependencies": {
-    "libphonenumber-js": "^0.4.5"
+    "libphonenumber-js": "^0.4.52"
   }
 }
